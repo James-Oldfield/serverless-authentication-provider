@@ -1,21 +1,22 @@
-# Authentication provider example for Serverless Authentication
+# serverless-authentication-strava
+Authentication provider using Strava for Serverless Authentication via nodeJS.
 
-This is an example provider that can be used as a starting point when creating a new authentication provider for [Serverless Authentication boilerplate](https://github.com/laardee/serverless-authentication-boilerplate).
+For use with [this](https://github.com/laardee/serverless-authentication-boilerplate) boilerplate and the serverless framework.
 
-## Source - src/index.js
-**ExampleProvider.signin**
-The purpose of this function is to return redirect url to the authentication provider sign in page
+### install
 
-**ExampleProvider.callback**
-User profile should be returned in callback of this function.
+`npm i -S serverless-authentication-strava`
 
-## Tests - specs/
-Basic authentication flow is mocked in specs/test-authentication.js. To run tests use `npm run compile-test` which first compiles src folder and then runs the tests.
+### sample usage
+```js
+import Strava from 'serverless-authentication-strava';
 
-## Examples
+Strava.signinHandler(providerConfig, { scope: 'public', state },
+    (err, data) => redirectProxyCallback(context, data));
 
-Following providers are build similar way than this example
-
-* https://github.com/laardee/serverless-authentication-facebook
-* https://github.com/laardee/serverless-authentication-google
-* https://github.com/laardee/serverless-authentication-microsoft
+Strava.callbackHandler(
+    event,
+    providerConfig,
+    handleResponse
+);
+```
