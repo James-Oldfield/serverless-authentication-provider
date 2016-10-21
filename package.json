@@ -1,20 +1,21 @@
 {
-  "name": "serverless-authentication-provider",
-  "version": "0.2.0",
-  "description": "Example authentication provider module for Serverless Authentication",
+  "name": "serverless-authentication-strava",
+  "version": "0.0.1",
+  "description": "Authentication provider module for Serverless Authentication via strava",
   "main": "lib/index.js",
   "license": "MIT",
   "private": false,
-  "author": "Eetu Tuomala <eetu.tuomala@sc5.io>",
+  "author": "James Oldfield <hi@james-oldfield.co>",
   "keywords": [
     "serverless",
     "aws",
     "oauth",
-    "lambda"
+    "lambda",
+    "strava"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/laardee/serverless-authentication-provider"
+    "url": "https://github.com/james-oldfield/serverless-authentication-strava"
   },
   "dependencies": {
     "serverless-authentication": "^0.4.4"
@@ -28,8 +29,7 @@
     "nock": "^7.7.2",
     "eslint": "^2.8.0",
     "eslint-config-airbnb": "^7.0.0",
-    "eslint-plugin-jsx-a11y": "^0.6.2",
-    "eslint-plugin-react": "^4.3.0"
+    "eslint-plugin-jsx-a11y": "^0.6.2"
   },
   "scripts": {
     "compile": "./node_modules/.bin/babel src --out-dir lib",
