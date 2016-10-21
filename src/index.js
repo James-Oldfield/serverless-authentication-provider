@@ -31,7 +31,7 @@ class Strava extends Provider {
     const profileMap = (response) => ({
       provider: 'strava',
       ...response
-    })
+    });
 
     const options = {
       authorization_uri: 'https://www.strava.com/oauth/token',
