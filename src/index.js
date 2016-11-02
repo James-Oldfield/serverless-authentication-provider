@@ -10,12 +10,11 @@ class Strava extends Provider {
    * @param state
    * @param callback, returns url that will be used for redirecting to oauth provider signin page
    */
-  signinHandler({ scope = 'profile', state }, callback) {
+  signinHandler({ scope = 'public', state }, callback) {
     const signinOptions = Object.assign({
       scope, state,
     }, {
       signin_uri: 'https://www.strava.com/oauth/authorize',
-      scope: 'public',
       response_type: 'code',
     });
 

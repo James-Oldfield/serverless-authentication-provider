@@ -1,6 +1,6 @@
 {
   "name": "serverless-authentication-strava",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Authentication provider module for Serverless Authentication via strava",
   "main": "lib/index.js",
   "license": "MIT",
